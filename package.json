@@ -1,4 +1,5 @@
 {
+  "homepage": "http://KaterinaPri.github.io/eco",
   "name": "gulp-boilerplate",
   "version": "1.0.0",
   "description": "Frontend boilerplate based on gulp",
@@ -8,8 +9,8 @@
     "start": "mate-scripts start",
     "lint": "mate-scripts lint",
     "test:only": "mate-scripts test",
-    "build": "mate-scripts build",
-    "deploy": "mate-scripts deploy",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "update": "mate-scripts update",
     "postinstall": "npm run update",
     "test": "npm run lint && npm run test:only"
